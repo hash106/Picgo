@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>进校</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    div{
+      text-align: center;
+    }
+    span{
+      color: red;
+      font-size: 120px;
+    }
+    h1{
+      font-size: 100px;
+    }
+    h2{
+      font-size: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>进校</h1>
+    <div>
+      <img src="" alt="">
+      <h5></h5>
+    </div>
+    <h2>白名单验证通过</h2>
+    <span id="time"></span>
+
+  </div>
+
+  <script>
+			// 在页面上实现一个显示当前时间的动态时钟
+ 
+			setInterval(function() {
+				var date = new Date();
+				var hours = date.getHours();
+				var minutes = date.getMinutes();
+				var seconds = date.getSeconds();
+        var millseconds = date.getMilliseconds()
+        // console.log(date);
+				hours = hours > 9 ? hours : "0" + hours;
+				minutes = minutes > 9 ? minutes : "0" + minutes;
+				seconds = seconds > 9 ? seconds : "0" + seconds;
+				var currentTime = hours + ":" + minutes + ":" + seconds + "." + millseconds
+				document.getElementById("time").innerHTML = currentTime;
+			}, 100)
+		</script>
+
+  <script src="./js/jquery-3.6.1.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
